@@ -50,13 +50,12 @@
                                 <img id="currencyImage" src="img/logo-bcv.png" alt="USD" class="img-fluid"
                                     style="max-height: min(250px, 60vw); max-width: 200px;" id="currencyImage">
                             </div>
-                            <h1 class="display-5 display-md-4 display-lg-1 mb-2 mb-sm-3 mb-md-4" id="exchangeRate">
-                                Cargando...</h1>
-                            <div class="d-flex justify-content-center gap-2 gap-md-4 mb-2 mb-sm-3 mb-md-4">
-                                <span id="change"
-                                    class="badge bg-success text-white fs-6 fs-sm-5 fs-md-4 px-2 px-md-3 py-1 py-md-2"></span>
-                                <span id="percent"
-                                    class="badge bg-success text-white fs-6 fs-sm-5 fs-md-4 px-2 px-md-3 py-1 py-md-2"></span>
+                            <div class="position-relative mb-2 mb-sm-3 mb-md-4">
+                                <h1 class="display-5 display-md-4 display-lg-1 text-center mb-0" id="exchangeRate">Cargando...</h1>
+                                <div class="position-absolute top-0 end-0 h-100 d-flex flex-column justify-content-center gap-2">
+                                    <span id="change" class="badge bg-success text-white fs-6 fs-sm-5 fs-md-4 px-2 px-md-3 py-1 py-md-2"></span>
+                                    <span id="percent" class="badge bg-success text-white fs-6 fs-sm-5 fs-md-4 px-2 px-md-3 py-1 py-md-2"></span>
+                                </div>
                             </div>
                             <p class="text-muted fs-6 fs-md-5 mb-0" id="lastUpdate">Última actualización: Cargando...
                             </p>
