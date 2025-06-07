@@ -4,7 +4,6 @@ async function fetchExchangeRate() {
         const data = await response.json();
         
         document.getElementById('exchangeRate').textContent = `Bs. ${data.price}`;
-        //document.getElementById('currencyImage').src = data.image;
         
         // Configurar el cambio
         const changeElement = document.getElementById('change');
@@ -34,3 +33,29 @@ setInterval(fetchExchangeRate, 300000);
 window.addEventListener('load', function() {
     document.getElementById('bcv').scrollIntoView({ behavior: 'smooth' });
 });
+
+// Función para detectar y mostrar el tamaño de pantalla
+function updateScreenSize() {
+    const width = window.innerWidth;
+    let size = '';
+    
+    if (width < 576) {
+        size = 'xs';
+    } else if (width < 768) {
+        size = 'sm';
+    } else if (width < 992) {
+        size = 'md';
+    } else if (width < 1200) {
+        size = 'lg';
+    } else if (width < 1400) {
+        size = 'xl';
+    } else {
+        size = 'xxl';
+    }
+    
+    document.getElementById('screenSize').textContent = `Tamaño de pantalla actual: ${size} (${width}px)`;
+}
+
+// Actualizar al cargar y al redimensionar
+window.addEventListener('load', updateScreenSize);
+window.addEventListener('resize', updateScreenSize);

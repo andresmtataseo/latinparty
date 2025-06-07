@@ -18,12 +18,14 @@
 
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Inicio</a>
+                        <a class="nav-link active" href="#bcv">Inicio</a>
                     </li>
                 </ul>
 
                 <div class="d-flex align-items-center">
-                    <img src="img/logo-latinparty.png" alt="Latin Party Logo" class="me-2 ms-2" style="height: 40px;">
+                    <a href="#bcv">
+                        <img src="img/logo-latinparty.png" alt="Latin Party Logo" class="me-2 ms-2" style="height: 40px;">
+                    </a>
                 </div>
 
                 <ul class="navbar-nav me-auto">
@@ -70,16 +72,13 @@
             <p class="text-center mb-2 mt-2 text-muted">© 2025 Desarrollado por <a
                     href="https://github.com/andresmtataseo" class="text-decoration-none text-primary">Ing. Andres
                     Moreno</a></p>
+            <p class="text-center mb-2 text-muted small" id="screenSize"></p>
         </div>
     </footer>
 
     <script src="js/bootstrap.js"></script>
     <script src="js/script.js"></script>
-    <script>
-        window.addEventListener('load', function() {
-            document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
-        });
-    </script>
+
 </body>
 
 </html>
