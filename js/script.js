@@ -68,3 +68,30 @@ function updateScreenSize() {
 // Actualizar al cargar y al redimensionar
 window.addEventListener('load', updateScreenSize);
 window.addEventListener('resize', updateScreenSize);
+
+// Función para mantener la pantalla encendida
+async function keepScreenAwake() {
+    try {
+        // Verificar si el navegador soporta wakeLock
+        if ('wakeLock' in navigator) {
+            // Solicitar wakeLock
+            const wakeLock = await navigator.wakeLock.request('screen');
+            
+            // Manejar cuando el usuario sale de la página
+            document.addEventListener('visibilitychange', async () => {
+                if (document.visibilityState === 'visible') {
+                    try {
+                        await wakeLock.request();
+                    } catch (err) {
+                        console.log('No se pudo reactivar wakeLock:', err);
+                    }
+                }
+            });
+        }
+    } catch (err) {
+        console.log('No se pudo activar wakeLock:', err);
+    }
+}
+
+// Activar wakeLock al cargar la página
+window.addEventListener('load', keepScreenAwake);
