@@ -42,27 +42,23 @@ function updateScreenSize() {
     
     if (width < 576) {
         size = 'xs';
-        currencyImage.style.display = 'none';
+        currencyImage.style.maxWidth = '150px';
     } else if (width < 768) {
         size = 'sm';
-        currencyImage.style.display = 'none';
+        currencyImage.style.maxWidth = '180px';
     } else if (width < 992) {
         size = 'md';
-        currencyImage.style.display = 'none';
+        currencyImage.style.maxWidth = '200px';
     } else if (width < 1200) {
         size = 'lg';
-        currencyImage.style.display = 'block';
         currencyImage.style.maxWidth = '250px';
     } else if (width < 1400) {
         size = 'xl';
-        currencyImage.style.display = 'block';
         currencyImage.style.maxWidth = '250px';
     } else {
         size = 'xxl';
-        currencyImage.style.display = 'block';
         currencyImage.style.maxWidth = '250px';
     }
-    
 }
 
 // Actualizar al cargar y al redimensionar
