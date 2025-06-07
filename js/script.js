@@ -29,3 +29,8 @@ fetchExchangeRate();
 
 // Actualizar cada 5 minutos
 setInterval(fetchExchangeRate, 300000);
+
+// Scroll automático a la sección main al cargar la página
+window.addEventListener('load', function() {
+    document.getElementById('bcv').scrollIntoView({ behavior: 'smooth' });
+});
