@@ -38,19 +38,26 @@ window.addEventListener('load', function() {
 function updateScreenSize() {
     const width = window.innerWidth;
     let size = '';
+    const currencyImage = document.getElementById('currencyImage');
     
     if (width < 576) {
         size = 'xs';
+        currencyImage.style.maxWidth = '200px';
     } else if (width < 768) {
         size = 'sm';
+        currencyImage.style.maxWidth = '200px';
     } else if (width < 992) {
         size = 'md';
+        currencyImage.style.maxWidth = '200px';
     } else if (width < 1200) {
         size = 'lg';
+        currencyImage.style.maxWidth = '250px';
     } else if (width < 1400) {
         size = 'xl';
+        currencyImage.style.maxWidth = '250px';
     } else {
         size = 'xxl';
+        currencyImage.style.maxWidth = '250px';
     }
     
     document.getElementById('screenSize').textContent = `Tamaño de pantalla actual: ${size} (${width}px)`;
