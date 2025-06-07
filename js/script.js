@@ -48,6 +48,7 @@ function updateScreenSize() {
         currencyImage.style.maxWidth = '180px';
     } else if (width < 992) {
         size = 'md';
+        document.getElementById('title').style.display = 'none';
         currencyImage.style.maxWidth = '200px';
     } else if (width < 1200) {
         size = 'lg';
