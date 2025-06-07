@@ -3,7 +3,7 @@ async function fetchExchangeRate() {
         const response = await fetch('https://pydolarve.org/api/v2/tipo-cambio?currency=usd&format_date=iso&rounded_price=true');
         const data = await response.json();
         
-        document.getElementById('exchangeRate').textContent = `Bs. ${data.price}`;
+        document.getElementById('exchangeRate').textContent = `Bs/USD ${data.price}`;
         
         // Configurar el cambio
         const changeElement = document.getElementById('change');
@@ -42,25 +42,27 @@ function updateScreenSize() {
     
     if (width < 576) {
         size = 'xs';
-        currencyImage.style.maxWidth = '200px';
+        currencyImage.style.display = 'none';
     } else if (width < 768) {
         size = 'sm';
-        currencyImage.style.maxWidth = '200px';
+        currencyImage.style.display = 'none';
     } else if (width < 992) {
         size = 'md';
-        currencyImage.style.maxWidth = '200px';
+        currencyImage.style.display = 'none';
     } else if (width < 1200) {
         size = 'lg';
+        currencyImage.style.display = 'block';
         currencyImage.style.maxWidth = '250px';
     } else if (width < 1400) {
         size = 'xl';
+        currencyImage.style.display = 'block';
         currencyImage.style.maxWidth = '250px';
     } else {
         size = 'xxl';
+        currencyImage.style.display = 'block';
         currencyImage.style.maxWidth = '250px';
     }
     
-    document.getElementById('screenSize').textContent = `Tamaño de pantalla actual: ${size} (${width}px)`;
 }
 
 // Actualizar al cargar y al redimensionar
