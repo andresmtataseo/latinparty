@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latin Party - Tasa de Cambio</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Latin Party</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+                    aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor03">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Inicio
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex-grow-1 d-flex align-items-center justify-content-center">
+        <div class="container-fluid px-2 px-md-4">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-lg">
+                        <div class="card-body text-center p-3 p-md-5">
+                            <h2 class="card-title display-6 display-md-4 mb-3 mb-md-4">Tasa de Cambio USD/VES</h2>
+                            <div class="d-flex justify-content-center align-items-center mb-3 mb-md-4">
+                                <img id="currencyImage" src="img/logo-bcv.png" alt="USD" class="img-fluid"
+                                    style="max-width: min(300px, 80vw);">
+                            </div>
+                            <h1 class="display-4 display-md-1 mb-3 mb-md-4" id="exchangeRate">Cargando...</h1>
+                            <div class="d-flex justify-content-center gap-2 gap-md-4 mb-3 mb-md-4">
+                                <span id="change" class="badge bg-success text-white fs-5 fs-md-4 px-2 px-md-3 py-1 py-md-2"></span>
+                                <span id="percent" class="badge bg-success text-white fs-5 fs-md-4 px-2 px-md-3 py-1 py-md-2"></span>
+                            </div>
+                            <p class="text-muted fs-6 fs-md-5" id="lastUpdate">Última actualización: Cargando...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-3 my-4 mt-auto">
+        <div class="container">
+            <p class="text-center">© 2025 Desarrollado por <a href="https://github.com/andresmtataseo">Ing. Andres
+                    Moreno</a></p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
